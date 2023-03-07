@@ -1,7 +1,7 @@
 def mutate_string(string, position, character):
-    x = list(string)
-    x[position] = character
-    string = ''.join(x)
+    x = list(string)            #made string to list
+    x[position] = character     #changed the specified character in specified position 
+    string = ''.join(x)         #made the list back to string and updated the initial string
     return string
 
 if __name__ == '__main__':
