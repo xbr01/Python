@@ -1,0 +1,26 @@
+def solve(s):
+    leng = len(s)
+    out = ""
+    
+    for i in range(leng):
+        if i == 0:
+            z = s[i].capitalize()                  # check if its the first character and capitalizes
+            out = out + z
+        elif s[i-1] == ' ' and s[i] != ' ':        # checks the index if there is a character and also the previous index is empty and capitalize  
+            z = s[i].capitalize()
+            out = out + z
+        else:                                      # adds the character without capitalizing if other two conditions are not satisfied
+            out = out + s[i]
+    return(out) 
+
+if __name__ == '__main__':                         # given 
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
+
